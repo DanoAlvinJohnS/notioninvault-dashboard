@@ -1,0 +1,28 @@
+
+/* ===== Apply the theme to all of Obsidian (opt-in: the plugin adds body.vd-global) =====
+   Variables are scoped to .app-container, so modals, menus and tooltips (which live outside it) keep Obsidian's own colours. */
+.vd-gbg{position:fixed;inset:calc(var(--bg-blur,0px)*-2);z-index:0;pointer-events:none;background-size:cover;background-position:center;background-repeat:no-repeat;filter:blur(var(--bg-blur,0px))}
+.vd-gbg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 15% 0%,transparent 30%,rgba(0,0,0,.4)),rgba(8,5,3,var(--glass-dim,.35))}
+body.vd-global.vd-wall{background-color:#120d09}
+body.vd-global .app-container{
+  position:relative;z-index:1;
+  --background-primary:var(--vd-pane);--background-secondary:var(--vd-side);--background-secondary-alt:var(--vd-side-alt);
+  --background-modifier-border:var(--vd-line);--text-normal:var(--vd-text);--text-muted:var(--vd-muted);--text-faint:var(--vd-faint);
+  --interactive-accent:var(--vd-accent);--text-on-accent:var(--vd-on-accent);
+  --font-interface:var(--vd-body);--font-text:var(--vd-text-font);letter-spacing:var(--vd-ls);
+}
+body.vd-global.vd-headfont .app-container{--h1-font:var(--vd-head);--h2-font:var(--vd-head);--h3-font:var(--vd-head);--h4-font:var(--vd-head);--h5-font:var(--vd-head);--h6-font:var(--vd-head)}
+body.vd-global.vd-headfont .inline-title{font-family:var(--vd-head)}
+/* with a wallpaper: let it show through the app shell... */
+body.vd-global.vd-wall .app-container,body.vd-global.vd-wall .horizontal-main-container,body.vd-global.vd-wall .workspace,
+body.vd-global.vd-wall .workspace-split,body.vd-global.vd-wall .workspace-tabs,body.vd-global.vd-wall .workspace-leaf,
+body.vd-global.vd-wall .workspace-leaf-content,body.vd-global.vd-wall .view-content{background:transparent}
+/* ...and turn the chrome into glass */
+body.vd-global.vd-wall .workspace-split.mod-left-split,body.vd-global.vd-wall .workspace-split.mod-right-split,
+body.vd-global.vd-wall .workspace-ribbon,body.vd-global.vd-wall .status-bar,body.vd-global.vd-wall .titlebar,
+body.vd-global.vd-wall .workspace-tab-header-container{background:var(--vd-side);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-sat));backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-sat))}
+/* the note area: readable dark glass ("sidebars and tabs") or the same glass as the rest ("everything") */
+body.vd-global.vd-wall .workspace-split.mod-root .view-content:not(.vd-root){background:var(--vd-editor);-webkit-backdrop-filter:blur(var(--glass-blur));backdrop-filter:blur(var(--glass-blur))}
+/* the dashboard view reuses the app-wide wallpaper instead of drawing its own */
+body.vd-global.vd-wall .vd-root .vd-bg{display:none}
+body.vd-global.vd-wall .vd-root.has-bg{background-color:transparent}
