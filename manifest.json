@@ -1,7 +1,7 @@
 {
-  "id": "vault-dashboard",
+  "id": "notioninvault-dashboard",
   "name": "Vault Dashboard",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "minAppVersion": "1.5.0",
   "description": "A dashboard for your vault with a tasks board, calendar, link graph, Canvas assignments and optional AI agents.",
   "author": "AlvinJohnDano",

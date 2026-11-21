@@ -33,7 +33,7 @@ A dashboard for your vault, built for students: an overview page, a tasks board,
 
 ### Manually
 1. Download `main.js`, `manifest.json` and `styles.css` from the latest release.
-2. Put them in `<your vault>/.obsidian/plugins/vault-dashboard/`.
+2. Put them in `<your vault>/.obsidian/plugins/notioninvault-dashboard/`.
 3. Reload Obsidian and enable **Vault Dashboard**.
 
 Then click the dashboard icon in the left ribbon, or run the command **Open dashboard**.
