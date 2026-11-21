@@ -59,7 +59,7 @@ function wireFilter(edit) {
 function canvasDialog() {
   const dlg = $('#dlg'), c = S.canvas, plugin = !!hooks.openCanvasSettings;
   dlg.className = 'wgadd';
-  const where = plugin ? '<li>Open <b>Settings, Vault Dashboard, Canvas</b> and paste the token (field <b>C_API_HERE</b>) and your school address.</li>'
+  const where = plugin ? '<li>Open <b>Settings, NotionInVault Dashboard, Canvas</b> and paste the token (field <b>C_API_HERE</b>) and your school address.</li>'
     : '<li>Open <b>start.cmd</b> in the dashboard folder. Paste the token after <b>set "C_API_HERE=</b> and your school address after <b>set "CANVAS_URL=</b>, save, and start the dashboard again.</li>';
   dlg.innerHTML = `<h2>Canvas</h2>${c.configured && !c.error
     ? `<p class="sub">Connected. ${c.items.length} assignments with due dates in ${c.courses.length} courses.${c.fetchedAt ? ' Updated ' + new Date(c.fetchedAt * 1000).toLocaleTimeString() + '.' : ''}</p><p class="tp-hint">Canvas items are read-only. They appear in the calendar, Due soon, charts and Progress. Use the filter at the top to show Overall, Personal or Canvas only.</p>`

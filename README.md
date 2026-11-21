@@ -1,4 +1,4 @@
-# Vault Dashboard
+# NotionInVault Dashboard
 
 A dashboard for your vault, built for students: an overview page, a tasks board, a calendar, a link graph, your Canvas assignments, a review queue, and optional AI agents that can propose changes to your notes.
 
@@ -29,18 +29,18 @@ A dashboard for your vault, built for students: an overview page, a tasks board,
 ### With BRAT (before it is in the community list)
 1. Install the **BRAT** plugin from Community plugins.
 2. In BRAT choose *Add Beta plugin* and enter this repository's address.
-3. Enable **Vault Dashboard** under Settings > Community plugins.
+3. Enable **NotionInVault Dashboard** under Settings > Community plugins.
 
 ### Manually
 1. Download `main.js`, `manifest.json` and `styles.css` from the latest release.
 2. Put them in `<your vault>/.obsidian/plugins/notioninvault-dashboard/`.
-3. Reload Obsidian and enable **Vault Dashboard**.
+3. Reload Obsidian and enable **NotionInVault Dashboard**.
 
 Then click the dashboard icon in the left ribbon, or run the command **Open dashboard**.
 
 ## Turning on the AI agents
 
-Settings > Vault Dashboard > **Enable AI agents**. This starts everything without a restart; turning it off stops the server, Spark and any running agent process. Vaults that already used the agents before this switch existed keep them on.
+Settings > NotionInVault Dashboard > **Enable AI agents**. This starts everything without a restart; turning it off stops the server, Spark and any running agent process. Vaults that already used the agents before this switch existed keep them on.
 
 ## Disclosures
 

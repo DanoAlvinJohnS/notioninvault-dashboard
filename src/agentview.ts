@@ -46,7 +46,7 @@ export class AgentChatView extends ItemView {
     };
     this.select.onfocus = () => { void this.loadAgents(); };   // picks up agent files added since
 
-    if (!this.plugin.agents) { this.say('AI agents are off. Turn on "Enable AI agents" in Settings > Vault Dashboard (desktop only).'); return; }
+    if (!this.plugin.agents) { this.say('AI agents are off. Turn on "Enable AI agents" in Settings > NotionInVault Dashboard (desktop only).'); return; }
     this.chat = new ChatController(() => { throw new Error('engine not ready'); });
     this.off = this.plugin.agents.onPending(() => { this.refresh = true; this.schedule(); });   // cards follow the queue
     await this.loadAgents();

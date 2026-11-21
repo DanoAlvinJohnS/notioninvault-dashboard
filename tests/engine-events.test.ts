@@ -56,7 +56,7 @@ test('classifyError', () => {
   assert.equal(classifyError('claude', 'spawn claude.exe ENOENT'), MSG.missing('claude'));
   assert.equal(classifyError('gemini', 'spawn node ENOENT'), MSG.missing('gemini'));
   assert.equal(classifyError('claude', 'all good'), null);
-  assert.equal(MSG.missing('gemini'), "Gemini CLI isn't installed or wasn't found. Set its path in Settings > Vault Dashboard.");
+  assert.equal(MSG.missing('gemini'), "Gemini CLI isn't installed or wasn't found. Set its path in Settings > NotionInVault Dashboard.");
 });
 
 test('claude tool_result text from string and from parts', () => {

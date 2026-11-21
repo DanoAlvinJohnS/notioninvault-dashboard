@@ -4,7 +4,7 @@ import { ENGINE_LABEL } from './types.ts';
 
 const PROGRAM: Record<EngineName, string> = { claude: 'Claude Code', gemini: 'Gemini CLI' };
 export const MSG = {
-  missing: (e: EngineName) => `${PROGRAM[e]} isn't installed or wasn't found. Set its path in Settings > Vault Dashboard.`,
+  missing: (e: EngineName) => `${PROGRAM[e]} isn't installed or wasn't found. Set its path in Settings > NotionInVault Dashboard.`,
   claudeLogin: `Claude Code isn't signed in. Run "claude" in a terminal once and log in.`,
   geminiKey: 'Gemini rejected the API key. Check GEMINI_API_KEY (or the key in Gemini CLI\'s settings).',
   rate: (e: EngineName) => `The ${ENGINE_LABEL[e]} rate limit was reached. Wait a bit or switch this agent to the other engine.`,

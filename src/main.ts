@@ -155,7 +155,7 @@ export default class DashboardPlugin extends Plugin {
 
   openCanvasSettings() {
     const s = (this.app as any).setting;
-    if (!s?.open) { new Notice('Open Settings > Vault Dashboard to connect Canvas.'); return; }
+    if (!s?.open) { new Notice('Open Settings > NotionInVault Dashboard to connect Canvas.'); return; }
     s.open();
     window.setTimeout(() => { try { s.openTabById?.(this.manifest.id); } catch (e) { console.error('[vault-dashboard]', e); } }, 0);
   }

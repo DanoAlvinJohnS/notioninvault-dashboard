@@ -36,7 +36,7 @@ export class VaultService {
 
   constructor(app: App, tasksFolder = 'Tasks', store?: Store) { this.app = app; this.tasksFolder = tasksFolder; this.store = store; }
 
-  /** Canvas: URL and token live in the plugin's data.json (Settings > Vault Dashboard). */
+  /** Canvas: URL and token live in the plugin's data.json (Settings > NotionInVault Dashboard). */
   async canvasConfig() {
     const c = (await this.store?.load())?.canvas ?? {};
     const token = String(c.token ?? '').trim();
